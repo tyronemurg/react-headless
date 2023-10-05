@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import WooCommerceService from './services/WooCommerceService';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -19,6 +20,7 @@ const Products = () => {
           <h3 className="text-xl font-bold mb-2">{product.name}</h3>
           <p>Price: {product.price}</p>
           <img src={product.images[0].src} alt={product.name} className="w-full h-32 object-cover mb-4"/>
+          <Link to={`/product/${product.id}`} className="text-blue-600">Read more</Link>
         </div>
       ))}
     </div>

@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import WordPressPosts from './WordPressPosts';
 import SinglePost from './SinglePost';
+import SingleProduct from './SingleProduct';
 import Products from './Products';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" element={<WordPressPosts />} />
         <Route path="/post/:id" element={<SinglePost />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/product/:id" element={<SingleProduct />} />
       </Routes>
       <Footer />
     </Router>
