@@ -15,12 +15,23 @@ const SingleProduct = ({ productId }) => {
   }
 
   return (
-    <div>
-     <SingleProduct productId={product.id} />
+    
+   <div className="container mx-auto mt-8 p-4">
+    <SingleProduct productId={product.id} />
       <h2>{product.name}</h2>
-      <p>Price: {product.price}</p>
-      <img src={product.images[0].src} alt={product.name} />
-      <p>{product.description}</p>
+      <div className="flex">
+        <div className="w-1/2">
+          <img src={product.images[0].src} alt={product.name} className="max-w-full" />
+        </div>
+        <div className="w-1/2 pl-8">
+          <h2 className="text-2xl font-bold mb-4">{product.name}</h2>
+          <p className="text-lg font-bold mb-4">${product.price}</p>
+          <p className="mb-4">{product.description}</p>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Add to Cart
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
