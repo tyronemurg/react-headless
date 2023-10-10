@@ -23,7 +23,7 @@ const WordPressPosts = () => {
     <h1 className="text-2xl font-bold mb-4">WordPress Posts</h1>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {posts.map(post => (
-        <div key={post.id} className="border border-gray-300 p-4 rounded-md">
+        <div key={post.id} className="border border-gray-300 p-4 shadow-lg rounded-lg m-4 transition-transform transform hover:scale-105">
           <h2 className="text-xl font-bold mb-2">{post.title.rendered}</h2>
           {post._embedded && post._embedded['wp:featuredmedia'] && (
             <img
